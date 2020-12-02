@@ -1,0 +1,27 @@
+<div class="flex items-center md:hidden">
+    <button
+        @click="open = !open"
+        type="button"
+        class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-700 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 focus:text-gray-700 transition duration-150 ease-in-out"
+        x-bind:aria-label="open ? 'Close main menu' : 'Main menu'"
+        x-bind:aria-expanded="open"
+    >
+        <span
+            x-state:on="Menu open"
+            x-state:off="Menu closed"
+            :class="{ 'hidden': open, 'block': !open }"
+            role="img"
+        >
+            Menu
+        </span>
+        <span
+            x-state:on="Menu open"
+            x-state:off="Menu closed"
+            :class="{ 'hidden': !open, 'block': open }"
+            class="hidden"
+            role="img"
+        >
+            Close
+        </span>
+    </button>
+</div>

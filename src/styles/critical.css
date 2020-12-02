@@ -1,0 +1,23 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr min(80ch, 100%) 1fr;
+}
+
+main > * {
+    grid-column: 2;
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+.full-bleed {
+    grid-column: 1 / 4;
+    width: 100%;
+}
